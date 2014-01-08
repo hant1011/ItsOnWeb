@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * @file
+ * hantblock.module
+ */
+
+function hantblock_permission() {
+  return array(
+      'access arguments for hantblock page' => array(
+          'title' => t('Permission for HantBlock module'), 
+          'description' => t('Description of hantblock module permission.') ) );
+}
+
+function hantblock_menu() {
+  $items ['mypage'] = array(
+      'title' => 'HaNTBlock Page Title', 
+      'page callback' => 'hantblock_page_function', 
+      'access arguments' => array(
+          'access arguments for hantblock page' ), 
+      'type' => MENU_NORMAL_ITEM );
+  
+  return $items;
+}
+
+function hantblock_page_function($var1 = "hihi", $var2 = "hihi2") {
+  if ($var2 == "hihi3")
+    return "HIHIHI333333333333333333";
+  if ($var1 == "hihi")
+    return "HIHIHI";
+  else
+    return "HAHAHA";
+}
+
+/*
+ 
+ function hantblock_permission(){
+ return array(
+	'access_mypage' => array(
+		'title' => t('Access My Page'),
+		'description' => "Day la quy truy cap nhe",
+	),
+ );
+ }
+ 
+  function hantblock_menu() {
+    $items['mypage'] = array(
+		'title' => "My page",
+		'type' => MENU_NORMAL_ITEM,
+      'page callback' => 'hantblock_mypage',
+	  'access arguments' => array('access mypage'),
+    );
+    return $items;
+  }
+  
+  function hantblock_mypage()
+  {
+	return "<strong>Day la test nhe</strong>";
+}
+*/
+
+function hantblock_block_info() {
+  $blocks ['hantblock'] = array(
+      'info' => t('HantBlock Block (Structure > Blocks)') );
+  
+  return $blocks;
+}
+
+function hantblock_block_view($delta = '') {
+  
+  $block = array();
+  
+  switch ($delta) {
+    case 'hantblock' :
+      $block ['subject'] = t('HaNTBlock subject');
+      $block ['content'] = "Here is HantBlock content";
+      break;
+  }
+  return $block;
+}

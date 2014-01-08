@@ -1,0 +1,5 @@
+name = "HaNT Block"
+description = "This is hant block"
+core = "7.x"
+php = "5.2.4"
+version = "7.x.0.1"
