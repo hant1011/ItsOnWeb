@@ -8,7 +8,7 @@
 function hantblock_permission() {
   return array(
       'access arguments for hantblock page' => array(
-          'title' => t('Permission for HantBlock module'), 
+          'title' => t('Permission for HantBlock module abc'), 
           'description' => t('Description of hantblock module permission.') ) );
 }
 
