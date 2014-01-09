@@ -1,5 +1,5 @@
 name = "HaNT Block"
-description = "This is hant block"
+description = "This is hant block for ticket 1466"
 core = "7.x"
 php = "5.2.4"
 version = "7.x.0.1"
