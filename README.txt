@@ -122,3 +122,5 @@ More about developing:
  * Refer to the API documentation:
    http://api.drupal.org/api/drupal/7
 add test git
+edit bug website 10110
+Long Nguyen
